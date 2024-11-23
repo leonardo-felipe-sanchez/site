@@ -1,66 +1,40 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-<link rel="stylesheet" href="../css/style.css">
-<style>
-    </style>
-    </head>
-    
-    <body style="height: 2000px;">
-    
-    <h2>Automatic Slideshow</h2>
-<section id="showcase">
-        
-    <div class="container">
-        <h1>
-            Afordable professional web design
-        </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum, inventore itaque animi officiis repellat similique exercitationem consequatur veritatis doloremque.</p>
-    
-            <div class="mySlides">
-              <video autoplay muted loop  class="videoInsert">
-              <source src="../video/465149_Fire_Flames_1280x720.mp4" type="video/mp4">
-              <source src="movie.ogg" type="video/ogg">
-              Your browser does not support the video tag.
-             </video>
-            </div>
-            <div class="mySlides">
-                <video autoplay muted loop  class="videoInsert">
-                <source src="../video/458916_Ham_Pork_1920x1080.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-               </video>
-              </div>
-              
-              <div class="mySlides">
-                <video autoplay muted loop  class="videoInsert">
-                <source src="../video/7020310_Mapo_Tofu_1280x720.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-               </video>
-              </div>
-    </div>  
-</section> 
-<script>
-var myIndex = 0;
-carousel();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #mynav{
+      position: fixed;
+      width: 100%;
+      height: 300px;
+      transition: background-color 0.3s ease; /* Add a smooth transition */
+    }
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000); // Change image every 2 seconds
-}
-</script>
+    .nav-transparent{
+      background-color: transparent;
+    }
 
+    .nav-colored{
+      background-color: red;
+    }
+  </style>
+</head>
+<body style="height: 4000px;">
+  <div id="mynav" class="nav-transparent">sadadas</div>
+
+  <script>
+    const nav = document.getElementById('mynav');
+    window.onscroll = function() {
+      if (window.pageYOffset >= 20) {
+        nav.classList.add("nav-colored");
+        nav.classList.remove("nav-transparent");
+      } else {
+        nav.classList.remove("nav-colored");
+        nav.classList.add("nav-transparent");
+      }
+    };
+  </script>
 </body>
 </html>
