@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
+    <header id="cabeca" class="nav-transparent">
         <div class="logo">
 <a href="">
 <img src="../img/svc/THE.svg" alt="" id="the">
@@ -23,13 +23,13 @@
 
                 <ul>
                     <li>
-                        <a href="index.html">Menu</a>
+                        <a href="about.html">sobre nos</a>
                     </li>
                     <li>
-                        <a href="about.html">Restaurante</a>
+                        <a href="index.html">servicos</a>
                     </li>
                     <li>
-                        <a href="Services.html">Eventos</a>
+                        <a href="Services.html">restaurante</a>
                     </li>
                     <li>
                         <a href="Services.html">Converse conosco</a>
@@ -67,38 +67,99 @@
                   </div>
         </div>  
     </section> 
-<section class="newsletter">
-    <div class="container">
-        <h1>subscribe to our Newsletter</h1>    
-        <form>
-            <input type="email" placholder="enter email">
-            <button type="submit" class="button-1">Subscribe</button>
-        </form> 
+<section id="boxes">
+    <div class="container flex">
+        <div class="box">
+            <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08 (1).jpeg" alt="" srcset="">
+            <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08.jpeg" alt="" srcset="">
+            <img src="../img/img/WhatsApp Image 2024-10-09 at 18.23.52.jpeg" alt="" srcset="">
+        </div>
+        <div class="box">
+            <h3>CSS Styling</h3>
+            <p>Somos uma rede de restaurantes com ampla expertise no setor hoteleiro, estamos presentes nas principais redes hoteleiras possuindo operações na capital de São Paulo, regiões metropolitanas, interior, além de unidades no Norte e Nordeste do país.
+
+                Nosso objetivo é revolucionar o mercado de eventos, oferecendo soluções inovadoras, práticas e seguras, sempre com um toque especial. Seja qual for a ocasião, conte conosco para criar momentos memoráveis com a qualidade que nos diferencia.</p>
+        </div>
     </div>
 </section>
 
-<section id="boxes">
-    <div class="container">
+<section id="services">
+    <div class="container flex">
         <div class="box">
-            <img src="../img/210-2104705_html-logo-png-transparent-background.png" alt="" srcset="">
-            <h3>HTML markup</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, esse.</p>
+            <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08 (1).jpeg" alt="" srcset="">
+
         </div>
         <div class="box">
             <img src="../img/css.png" alt="" srcset="">
             <h3>CSS Styling</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, esse.</p>
-        </div>
-        <div class="box">
-            <img src="../img/monitor.png" alt="" srcset="">
-            <h3>Graphic Design</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, esse.</p>
+            <p>Seja qual for a ocasião, nós transformamos o seu evento em uma experiência memorável.
+                Adaptamos nossas estruturas para atender desde eventos corporativos formais até celebrações mais descontraídas, sempre oferecendo o formato ideal para cada necessidade.
+                
+                
+                Oferecemos soluções personalizadas em nossos restaurantes e salas, com coffee breaks perfeitos para reuniões e treinamentos, até banquetes sofisticados, coquetéis elegantes e casamentos inesquecíveis.
+                
+                Estamos prontos para criar uma experiência única, que impressionará seus convidados, colaboradores, clientes ou investidores.</p>
         </div>
     </div>
 </section>
+<section id="mapas">
+
+    <div class="container flex">
+        <div class="box">
+            <img src="../img/css.png" alt="" srcset="">
+            <h3>CSS Styling</h3>
+            <label for="standard-select">Standard Select</label>
+            <div class="select">
+              <select id="standard-select">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+                <option value="Option 4">Option 4</option>
+                <option value="Option 5">Option 5</option>
+                <option value="Option length">
+                  Option that has too long of a value to fit
+                </option>
+              </select>
+            </div>
+            <span class="focus"></span>
+        </div>
+            <div class="box">
+                <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08 (1).jpeg" alt="" srcset="">
+    
+            </div>
+    </div>
+</section>
+
+
+<section id="converse">
+    <div class="container flex">
+        <div class="box">
+            
+    <h1>Nossas redes</h1>
+        <ul>
+            <li>zap<i></i><a href=""></a></li>
+            <li>instagram<i></i><a href=""></a></li>
+            <li>telefone<i></i><a href=""></a></li>
+        </ul>
+
+        </div>
+        <div class="box">
+            <h1>Mande uma mensagem</h1>
+            <form action="">
+                <label for="Nome">Nome</label>
+            <input type="text">
+            <label for="Email">Email</label>
+            <input type="text">
+            <label for="Assunto">Assunto</label>
+            <textarea name="" id=""></textarea>
+            </form>
+        </div>
+    </div>
+</section>
+
 <footer>
     <div class="container flex">
-        <div class="box">    
+        <div class="box" id="direitinho">    
             <div class="logo">
                 <a href="">
                     <img src="../img/svc/THE.svg" alt="" id="the">
@@ -117,9 +178,9 @@
         <div class="box">
             <h3>Navegação</h3>
         <ul>
-            <li>Menu</li>
+            <li>Sobre nos</li>
+            <li>Servicos</li>
             <li>Restaurante</li>
-            <li>Eventos</li>
             <li>Converse conosco</li>
         </ul>
     </div>
