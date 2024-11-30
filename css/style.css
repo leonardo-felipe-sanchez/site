@@ -42,6 +42,9 @@ ul{
     display: flex;
 }
 
+section{
+    margin: 0 0 4% 0;
+}
 
 /*logo*/
 
@@ -70,7 +73,6 @@ width: 105px;
     width: 100%;
     padding: 15px 0 15px 0;
     align-items: center;
-    display: flex;
     justify-content: center;
 }
 
@@ -183,7 +185,11 @@ header a:hover{
     width: 40%;
 }
 
-#boxes .box img, #services .box img, #mapas .box img, #converse .box img{
+#boxes p{
+    margin-top: 15%;
+}
+
+#boxes .box img {
     width: 200px;
 }
 
@@ -192,7 +198,60 @@ header a:hover{
     margin-bottom: 60px;
 }
 
+.box h3{
+    margin-top: 0px;
+}
+
+/*grid*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    width: 400px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+    height: 200px;
+    
+  }
+  
+.item1, .item2{
+    background-size: 408px 300px;
+}
+
+  .item1 {
+    grid-column: 1 / 3;
+    background: url("../img/img/Paraiso.jpeg")no-repeat 0 -100px;
+}
+
+.item2{
+    background: url("../img/img/Paraiso2.jpeg")no-repeat -130px -100px;
+}
+
+.item3{
+    background: url("../img/img/imagem.jpeg")no-repeat -30px -20px;
+    background-size: 222px 219px;
+}
+
 /*services*/
+
+#services .box img{
+    width: 400px;
+    height: 260px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*mapa*/
+
+#mapas .box{
+    height: 300px;
+}
 
 /*select*/
 
@@ -265,6 +324,20 @@ select:focus + .focus {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+  }
+
+  #converse ul{
+
+    padding: 20% ;
+
+  }
+
+  #converse li{
+    padding-bottom: 10%;
+  }
+
+  #converse i{
+    margin-right: 10%;
   }
 
 /*footer*/

@@ -8,9 +8,10 @@
     <meta name="author" content="Leonardo Felipe Sanchez">
     <title>acme web design / welcome</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontawesome-free-6.7.1-web/css/all.css">
 </head>
 <body>
-    <header id="cabeca" class="nav-transparent">
+    <header id="cabeca" class="nav-transparent flex">
         <div class="logo">
 <a href="">
 <img src="../img/svc/THE.svg" alt="" id="the">
@@ -70,9 +71,19 @@
 <section id="boxes">
     <div class="container flex">
         <div class="box">
-            <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08 (1).jpeg" alt="" srcset="">
-            <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08.jpeg" alt="" srcset="">
-            <img src="../img/img/WhatsApp Image 2024-10-09 at 18.23.52.jpeg" alt="" srcset="">
+            
+            <div class="grid-container">
+                <div class="item1">
+                                      
+                </div>
+                <div class="item2">
+                                      
+                </div>
+                <div class="item3">
+                   
+                </div>  
+                </div>
+
         </div>
         <div class="box">
             <h3>CSS Styling</h3>
@@ -85,12 +96,11 @@
 
 <section id="services">
     <div class="container flex">
-        <div class="box">
-            <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08 (1).jpeg" alt="" srcset="">
+        <div class="box flex">
+            <img src="../img/img/imagem.jpeg" alt="" srcset="">
 
         </div>
         <div class="box">
-            <img src="../img/css.png" alt="" srcset="">
             <h3>CSS Styling</h3>
             <p>Seja qual for a ocasião, nós transformamos o seu evento em uma experiência memorável.
                 Adaptamos nossas estruturas para atender desde eventos corporativos formais até celebrações mais descontraídas, sempre oferecendo o formato ideal para cada necessidade.
@@ -106,16 +116,15 @@
 
     <div class="container flex">
         <div class="box">
-            <img src="../img/css.png" alt="" srcset="">
             <h3>CSS Styling</h3>
             <label for="standard-select">Standard Select</label>
             <div class="select">
               <select id="standard-select">
-                <option value="Option 1">Option 1</option>
-                <option value="Option 2">Option 2</option>
-                <option value="Option 3">Option 3</option>
-                <option value="Option 4">Option 4</option>
-                <option value="Option 5">Option 5</option>
+                <option value="Option 1" onclick="mapinha('um')">Option 1</option>
+                <option value="Option 2" onclick="mapinha('dois')" >Option 2</option>
+                <option value="Option 3" onclick="mapinha('tres')">Option 3</option>
+                <option value="Option 4" onclick="mapinha('quatro')">Option 4</option>
+                <option value="Option 5" onclick="mapinha('cinco')">Option 5</option>
                 <option value="Option length">
                   Option that has too long of a value to fit
                 </option>
@@ -123,9 +132,8 @@
             </div>
             <span class="focus"></span>
         </div>
-            <div class="box">
-                <img src="../img/img/WhatsApp Image 2024-10-08 at 16.54.08 (1).jpeg" alt="" srcset="">
-    
+            <div class="box flex">
+<iframe id="mapagoogle" src="" frameborder="0"></iframe>
             </div>
     </div>
 </section>
@@ -137,9 +145,9 @@
             
     <h1>Nossas redes</h1>
         <ul>
-            <li>zap<i></i><a href=""></a></li>
-            <li>instagram<i></i><a href=""></a></li>
-            <li>telefone<i></i><a href=""></a></li>
+            <li><i class="fa-brands fa-whatsapp fa-2xl"></i><a href="">12 34567-8910</a></li>
+            <li><i class="fa-brands fa-instagram fa-2xl"></i><a href="">@minhaconta</a></li>
+            <li><i class="fa-solid fa-phone fa-2xl"></i><a href="">12 3456-7891</a></li>
         </ul>
 
         </div>
@@ -152,6 +160,7 @@
             <input type="text">
             <label for="Assunto">Assunto</label>
             <textarea name="" id=""></textarea>
+            <input type="submit" value="clique aqui">
             </form>
         </div>
     </div>
