@@ -32,5 +32,7 @@ window.onscroll = function() {
 
 function mapinha(opcao){ 
   var imagem = document.getElementById("mapagoogle");
-  imagem.style.src= "url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15988604.96835149!2d-56.640899277444696!3d-11.94206478068657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be14f04208c27%3A0x8a25a4e379d45360!2sPAR%C3%81%20LANCHES!5e0!3m2!1spt-BR!2sbr!4v1732931131843!5m2!1spt-BR!2sbr')";
-};
+  if (opcao == 'dois') {
+    imagem.src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7951326385855!2d-46.78176442467065!3d-23.539869778814587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff633543ed97%3A0x4c0a962dfdb17dbb!2sThe%20Lucca%20Gastronomia%20%26%20Eventos%20Osasco!5e0!3m2!1spt-BR!2sbr!4v1733447239754!5m2!1spt-BR!2sbr";    
+  }
+}
