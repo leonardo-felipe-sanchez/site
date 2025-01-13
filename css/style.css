@@ -1,168 +1,243 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 :root {
     --select-border: #777;
-    --select-focus: blue;
+    --select-focus: #007bff;
     --select-arrow: var(--select-border);
-  }
+    --primary-color: #92A960;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+}
 
-body{
-    font: 15px/1.5 Arial, Helvetica, sans-serif;
+
+/* General body styles */
+body {
+    font: 16px/1.6 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #f4f4f4;
-}
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    /*  Show scroll bar again */
+    overflow-y: auto;
+  }
+  /*  Update the style of the tag <a> */
+  a{
+      color: white;
+      text-decoration: none;
+  }
+  
+  /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0); /* Transparent track */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Green handle */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid rgba(255, 255, 255, 0); /* Border to make transparent side */
+    background-clip: content-box; /*Ensure border does not extend to other parts*/
+  
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #78904e; /* A little darker shade on hover */
+  }
 
-/* Global*/
-.container{
-    width: 56%;
+.container {
+    width: 65%;
     margin: auto;
-    overflow: hidden;
-
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.button_1{
+.button_1 {
     height: 38px;
     background: #e8491d;
     border: 0;
-    padding:  20px 0 20px 0;
+    padding: 20px 0;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-#services , #mapas, #converse{
-    margin: 3% 0 3% 0;
+#services,
+#mapas,
+#converse {
+    margin: 4% 0;
 }
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block; /* Make the btn block */
+    margin-top: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #78904e; /* A little darker shade on hover */
+}
+
 
 /*logo*/
 
-.logo{
+.logo {
     display: flex;
+    align-items: center;
 }
 
-.logo img{
-        width: 34px;
+.logo img {
+    width: 34px;
+    transition: transform 0.3s ease;
 }
-#elle{
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+#elle {
     width: 47px;
-    margin: 0 -13px 0 -14.5px
+    margin: 0 -13px 0 -14.5px;
 }
 
-#circulo{
+#circulo {
     margin: -25px 0px 0px -95px;
-position: absolute;
-width: 105px;
+    position: absolute;
+    width: 105px;
 }
+
+#cabeca .logo img,
+#cabeca.nav-transparent .logo img,
+footer .logo img {
+    filter: invert(1) sepia(0) saturate(0) hue-rotate(0deg) brightness(10);
+}
+
 
 /* header */
-#cabeca{
-    min-height: 130px;
+#cabeca {
+    min-height: 100px;
     position: fixed;
     width: 100%;
-    padding: 15px 0 15px 0;
+    padding: 15px 0;
     align-items: center;
     justify-content: center;
     z-index: 3;
+    transition: background-color 0.3s ease;
 }
 
-
-header .container{
-    width: 53%;
+header .container {
+    width: 70%;
     margin: 0;
 }
-header a{
+
+header a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-header ul{
+header ul {
     justify-content: center;
     display: flex;
 }
 
-header li{
+header li {
     float: left;
     display: inline;
     padding: 0 40px 0 20px;
 }
 
-
-header #branding{
+header #branding {
     float: left;
 }
 
-header #branding h1{
-    margin:0
+header #branding h1 {
+    margin: 0;
 }
 
-header nav{
+header nav {
     float: right;
     margin-top: 10px;
 }
 
-header .highlight, header .current a{
-    color: #e8491d;
+header .highlight,
+header .current a {
+    color: var(--primary-color);
     font-weight: bold;
 }
 
-
-header a:hover{
-    color:#ccc;
+header a:hover {
+    color: #ccc;
     font-weight: bold;
 }
 
-.nav-transparent{
-    background: linear-gradient(180deg, rgba(6,6,6,0.90) 0%, rgba(0,212,255,0) 100%);
+.nav-transparent {
+    background: linear-gradient(180deg, rgba(6, 6, 6, 0.90) 0%, rgba(0, 212, 255, 0) 100%);
 }
 
-.nav-colored{
-    background-color: red;
+.nav-colored {
+    background-color: var(--primary-color);
 }
+
 
 /* Showcase*/
-#showcase{
+#showcase {
     text-align: center;
     color: #fff;
     height: 700px;
     align-items: center;
     display: flex;
+    position: relative; /* Added for parallax */
+    overflow: hidden;
 }
 
-#showcase h1{
+#showcase h1 {
     margin-top: 100px;
     font-size: 55pt;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-#showcase p{
-    font-size: 15pt;
+#showcase p {
+    font-size: 18pt;
+    text-shadow: 1px 1px 2px #000000;
 }
 
-.mySlides {display:none;
-    height:700px; /* Height option*/
-    width:100%;
-    overflow:hidden;
-    margin: 0px;
+.mySlides {
+    display: none;
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
     z-index: -100;
     object-fit: cover;
-    position: absolute; 
-    right: 0; 
+    position: absolute;
+    right: 0;
     bottom: 0;
     top: 0;
+    transition: transform 0.5s ease; /* added for parallax */
 }
 
 .videoInsert {
@@ -170,87 +245,116 @@ header a:hover{
     min-height: 100%;
     margin-top: -350px;
 }
-    
-/*boxes*/
 
-#boxes{
-    margin: 20px 0 20px 0;
+
+/* Boxes*/
+
+#boxes {
+    margin: 20px 0;
 }
 
-#boxes .container, #services .container, #mapas .container, #converse .container{
+#boxes .container,
+#services .container,
+#mapas .container,
+#converse .container {
     justify-content: center;
+    align-items: center;
 }
 
-#boxes .box, #services .box, #mapas .box, #converse .box{
-    text-align:left;
+#boxes .box,
+#services .box,
+#mapas .box,
+#converse .box {
+    text-align: left;
     width: 40%;
+    padding: 20px;
 }
 
-#boxes p{
+#boxes p {
     margin-top: 15%;
+    line-height: 1.8;
 }
 
 #boxes .box img {
     width: 200px;
 }
 
-.box .logo{
+.box .logo {
     margin-top: 30px;
     margin-bottom: 60px;
 }
 
-.box h3{
-    margin-top: 0px;
+.box h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
-/*grid*/
+
+/*Grid*/
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
     width: 400px;
-  }
-  
-  .grid-container > div {
+}
+
+.grid-container>div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     font-size: 30px;
     height: 200px;
+    border-radius: 8px; /* Rounded corners for grid items */
+    overflow: hidden; /* Ensure that background image is not beyond borders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
     
-  }
-  
-.item1, .item2{
+}
+
+.grid-container>div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.item1,
+.item2 {
     background-size: 408px 300px;
 }
 
-  .item1 {
+.item1 {
     grid-column: 1 / 3;
-    background: url("../img/img/Paraiso.jpeg")no-repeat 0 -100px;
+    background: url("../img/img/Paraiso.jpeg") no-repeat 0 -100px;
 }
 
-.item2{
-    background: url("../img/img/Paraiso2.jpeg")no-repeat -130px -100px;
+.item2 {
+    background: url("../img/img/Paraiso2.jpeg") no-repeat -130px -100px;
 }
 
-.item3{
-    background: url("../img/img/imagem.jpeg")no-repeat -30px -20px;
+.item3 {
+    background: url("../img/img/imagem.jpeg") no-repeat -30px -20px;
     background-size: 222px 219px;
 }
 
-/*services*/
 
-#services .box img{
-    width: 400px;
-    height: 260px;
+/*Services*/
+#services .box img {
+    width: 420px;
+    height: 100%;
     justify-content: center;
     align-items: center;
-
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*mapa*/
+#services .box img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
-#mapas .box{
+
+/*mapa*/
+#mapas .box {
     height: 300px;
 }
 
@@ -265,16 +369,16 @@ select {
     width: 100%;
     font-family: inherit;
     font-size: inherit;
-    cursor: inherit;
+    cursor: pointer;
     line-height: inherit;
     outline: none;
-  }
+}
 
-  select::-ms-expand {
+select::-ms-expand {
     display: none;
-  }
+}
 
-  .select {
+.select {
     width: 100%;
     min-width: 15ch;
     max-width: 30ch;
@@ -290,23 +394,23 @@ select {
     grid-template-areas: "select";
     align-items: center;
     position: relative;
-  }
+}
 
-  .select::after {
+.select::after {
     content: "";
     width: 0.8em;
     height: 0.5em;
     background-color: var(--select-arrow);
     clip-path: polygon(100% 0%, 0 0%, 50% 100%);
     justify-self: end;
-  }
-
-  select,
-.select:after {
-  grid-area: select;
 }
 
-select:focus + .focus {
+select,
+.select:after {
+    grid-area: select;
+}
+
+select:focus+.focus {
     position: absolute;
     top: -1px;
     left: -1px;
@@ -314,10 +418,11 @@ select:focus + .focus {
     bottom: -1px;
     border: 2px solid var(--select-focus);
     border-radius: inherit;
-  }
+}
 
-  /* converse */
-  input[type=text], textarea{
+/* converse */
+input[type=text],
+textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -325,41 +430,140 @@ select:focus + .focus {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
+}
 
-  #converse ul{
+#converse ul {
+    padding: 10% 10%;
+}
 
-    padding: 20% ;
-
-  }
-
-  #converse li{
+#converse li {
     padding-bottom: 10%;
-  }
+}
 
-  #converse i{
+#converse i {
     margin-right: 10%;
+}
+
+#converse h1 {
+    font-size: 1.7em;
+}
+
+#converse .box ul li a{
+    color: var(--primary-color);
   }
 
 /*footer*/
-    footer{
-        padding: 20px;
-        margin-top: 20px;
-        color: #fff;
-        background-color: #e8491d;
-    }
-    
-    footer p{
-        margin-top:-17px;
-    }
-    
-    footer .container{
-        display: flex;
-        justify-content: center;
-        margin-left: 310px;
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: var(--primary-color);
+}
 
+footer p {
+    margin-top: -17px;
+    line-height: 1.6;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+footer .box {
+    margin: 40px 80px;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    
-    footer .box{
-        margin: 40px 80px;
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-image {
+    animation: fadeIn 0.8s ease;
+}
+
+.smooth-scroll{
+        scroll-behavior: smooth;
+    }
+
+/*Parallax effect*/
+
+#showcase .mySlides::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateZ(-2px) scale(1.01); /* Adjust the translateZ value to control the depth. Scale to improve sharpness*/
+  }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+        .container {
+            width: 90%;
+        }
+
+        header .container {
+            width: 95%;
+            margin: 0;
+        }
+        header ul {
+            flex-direction: column;
+        }
+        header li {
+            padding: 10px 20px;
+            text-align: center;
+        }
+         #boxes .box,
+        #services .box,
+        #mapas .box,
+        #converse .box {
+            width: 100%; /* Make boxes full-width */
+            margin-bottom: 20px;
+            text-align: center; /* Center text */
+        }
+         #boxes .container, #services .container, #mapas .container, #converse .container{
+            flex-direction: column;
+        }
+         #services .box img{
+            width: 100%;
+            height: auto;
+        }
+         #showcase h1 {
+            font-size: 3rem;
+        }
+        #showcase p {
+            font-size: 1.2rem;
+        }
+        
+        footer .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-left: 0;
+        }
+        footer .box {
+            margin: 20px 0;
+        }
+        .grid-container {
+            width: 100%;
+            grid-template-columns: auto; /* Stack grid items */
+        }
+         .grid-container > div{
+            height: auto;
+        }
+        .item1, .item2{
+             background-size: cover;
+            background-position: center;
+        }
     }

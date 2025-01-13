@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars due to absolute positioning */
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: -1; /* Make it behind other content if needed */
+}
+
+.icon {
+    position: absolute;
+    color: #92A960; /* Icon color */
+    opacity: 0.7; /* Transparency */
+    pointer-events: none;
+    font-size: 18px;
+    display: inline-block; /* to respect the container sizes*/
+    margin: 5px;
+    transition: transform 0.3s;
+}
